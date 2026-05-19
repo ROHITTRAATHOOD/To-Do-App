@@ -1,22 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Todo App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Todo App</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <h2>Todo App</h2>
+  <div class="app">
 
-  <input type="text" id="taskInput">
-  <button onclick="addTask()">Add</button>
+    <!-- Header -->
+    <div class="header">
+      <h1>Task Manager</h1>
+      <p>Organize your daily work professionally</p>
+    </div>
 
-  <ul id="taskList"></ul>
-</div>
+    <!-- Input Section -->
+    <div class="todo-input">
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Enter your task..."
+      />
 
-<script src="script.js"></script>
+      <button id="addBtn">
+        Add Task
+      </button>
+    </div>
+
+    <!-- Task Stats -->
+    <div class="stats">
+      <div class="stat-box">
+        <h3 id="totalTasks">0</h3>
+        <span>Total</span>
+      </div>
+
+      <div class="stat-box">
+        <h3 id="completedTasks">0</h3>
+        <span>Completed</span>
+      </div>
+
+      <div class="stat-box">
+        <h3 id="pendingTasks">0</h3>
+        <span>Pending</span>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
